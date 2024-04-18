@@ -1,0 +1,3 @@
+/home/wkeller/test/build/CMakeFiles/MovieManager.dir
+/home/wkeller/test/build/CMakeFiles/edit_cache.dir
+/home/wkeller/test/build/CMakeFiles/rebuild_cache.dir

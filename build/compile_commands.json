@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/wkeller/test/build",
+  "command": "/usr/bin/g++ -DASIO_STANDALONE -g -o CMakeFiles/MovieManager.dir/main.cpp.o -c /home/wkeller/test/main.cpp",
+  "file": "/home/wkeller/test/main.cpp",
+  "output": "CMakeFiles/MovieManager.dir/main.cpp.o"
+}
+]
