@@ -1,8 +1,8 @@
 [
 {
-  "directory": "/home/wkeller/test/build",
-  "command": "/usr/bin/g++ -DASIO_STANDALONE -g -o CMakeFiles/MovieManager.dir/main.cpp.o -c /home/wkeller/test/main.cpp",
-  "file": "/home/wkeller/test/main.cpp",
+  "directory": "/home/wkeller/movietheathermanager/build",
+  "command": "/usr/bin/g++ -DASIO_STANDALONE -g -o CMakeFiles/MovieManager.dir/main.cpp.o -c /home/wkeller/movietheathermanager/main.cpp",
+  "file": "/home/wkeller/movietheathermanager/main.cpp",
   "output": "CMakeFiles/MovieManager.dir/main.cpp.o"
 }
 ]

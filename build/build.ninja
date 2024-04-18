@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/wkeller/test/build/
+cmake_ninja_workdir = /home/wkeller/movietheathermanager/build/
 # =============================================================================
 # Object build statements for EXECUTABLE target MovieManager
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = /home/wkeller/test/build/
 
 build cmake_object_order_depends_target_MovieManager: phony || .
 
-build CMakeFiles/MovieManager.dir/main.cpp.o: CXX_COMPILER__MovieManager_unscanned_Debug /home/wkeller/test/main.cpp || cmake_object_order_depends_target_MovieManager
+build CMakeFiles/MovieManager.dir/main.cpp.o: CXX_COMPILER__MovieManager_unscanned_Debug /home/wkeller/movietheathermanager/main.cpp || cmake_object_order_depends_target_MovieManager
   DEFINES = -DASIO_STANDALONE
   DEP_FILE = CMakeFiles/MovieManager.dir/main.cpp.o.d
   FLAGS = -g
@@ -67,7 +67,7 @@ build CMakeFiles/MovieManager.dir/main.cpp.o: CXX_COMPILER__MovieManager_unscann
 build MovieManager: CXX_EXECUTABLE_LINKER__MovieManager_Debug CMakeFiles/MovieManager.dir/main.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/MovieManager.dir
-  POST_BUILD = cd /home/wkeller/test/build && cp -rf /home/wkeller/test/templates/ /home/wkeller/test/build/templates/
+  POST_BUILD = cd /home/wkeller/movietheathermanager/build && cp -rf /home/wkeller/movietheathermanager/templates/ /home/wkeller/movietheathermanager/build/templates/
   PRE_LINK = :
   TARGET_FILE = MovieManager
   TARGET_PDB = MovieManager.dbg
@@ -77,7 +77,7 @@ build MovieManager: CXX_EXECUTABLE_LINKER__MovieManager_Debug CMakeFiles/MovieMa
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/wkeller/test/build && /usr/local/bin/ccmake -S/home/wkeller/test -B/home/wkeller/test/build
+  COMMAND = cd /home/wkeller/movietheathermanager/build && /usr/local/bin/ccmake -S/home/wkeller/movietheathermanager -B/home/wkeller/movietheathermanager/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -89,7 +89,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/wkeller/test/build && /usr/local/bin/cmake --regenerate-during-build -S/home/wkeller/test -B/home/wkeller/test/build
+  COMMAND = cd /home/wkeller/movietheathermanager/build && /usr/local/bin/cmake --regenerate-during-build -S/home/wkeller/movietheathermanager -B/home/wkeller/movietheathermanager/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -105,7 +105,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/wkeller/test/build
+# Folder: /home/wkeller/movietheathermanager/build
 
 build all: phony MovieManager
 
@@ -116,14 +116,14 @@ build all: phony MovieManager
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/wkeller/test/CMakeLists.txt /usr/local/lib/cmake/Crow/CrowConfig.cmake /usr/local/lib/cmake/Crow/CrowTargets.cmake /usr/local/lib/cmake/Crow/Findasio.cmake /usr/local/share/cmake-3.29/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake /usr/local/share/cmake-3.29/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckIncludeFile.cmake /usr/local/share/cmake-3.29/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.29/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.29/Modules/FindPkgConfig.cmake /usr/local/share/cmake-3.29/Modules/FindThreads.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/wkeller/movietheathermanager/CMakeLists.txt /usr/local/lib/cmake/Crow/CrowConfig.cmake /usr/local/lib/cmake/Crow/CrowTargets.cmake /usr/local/lib/cmake/Crow/Findasio.cmake /usr/local/share/cmake-3.29/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake /usr/local/share/cmake-3.29/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckIncludeFile.cmake /usr/local/share/cmake-3.29/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.29/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.29/Modules/FindPkgConfig.cmake /usr/local/share/cmake-3.29/Modules/FindThreads.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/wkeller/test/CMakeLists.txt /usr/local/lib/cmake/Crow/CrowConfig.cmake /usr/local/lib/cmake/Crow/CrowTargets.cmake /usr/local/lib/cmake/Crow/Findasio.cmake /usr/local/share/cmake-3.29/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake /usr/local/share/cmake-3.29/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckIncludeFile.cmake /usr/local/share/cmake-3.29/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.29/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.29/Modules/FindPkgConfig.cmake /usr/local/share/cmake-3.29/Modules/FindThreads.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake: phony
+build /home/wkeller/movietheathermanager/CMakeLists.txt /usr/local/lib/cmake/Crow/CrowConfig.cmake /usr/local/lib/cmake/Crow/CrowTargets.cmake /usr/local/lib/cmake/Crow/Findasio.cmake /usr/local/share/cmake-3.29/Modules/CMakeCInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCXXInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake /usr/local/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake /usr/local/share/cmake-3.29/Modules/CMakeGenericSystem.cmake /usr/local/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake /usr/local/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake /usr/local/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/CheckIncludeFile.cmake /usr/local/share/cmake-3.29/Modules/CheckLibraryExists.cmake /usr/local/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Compiler/GNU.cmake /usr/local/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake /usr/local/share/cmake-3.29/Modules/FindPackageMessage.cmake /usr/local/share/cmake-3.29/Modules/FindPkgConfig.cmake /usr/local/share/cmake-3.29/Modules/FindThreads.cmake /usr/local/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-C.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-GNU.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux-Initialize.cmake /usr/local/share/cmake-3.29/Modules/Platform/Linux.cmake /usr/local/share/cmake-3.29/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake: phony
 
 
 #############################################
