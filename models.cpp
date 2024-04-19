@@ -16,19 +16,22 @@ class Cinema {
 class Filme {
    public: 
    Filme() = default;
-   Filme(int id, string nome, string descricao) {
+   Filme(int id, string nome, string descricao, string poster) {
       id_filme = id;
       this->nome = nome;
       this->descricao = descricao;
+      this->poster = poster;
    }
     int id_filme;
     string nome;
     string descricao;
+    string poster;
 };
 
 class Room {
    public: 
    Room() = default;
+
    Room(int id_r, int id_cinema, int size) {
       id_room = id_r;
       this->id_cinema = id_cinema;

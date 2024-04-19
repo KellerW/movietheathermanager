@@ -1,23 +1,77 @@
 <!DOCTYPE html>
 <html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <body>
+    <style>
+        #container {
+            width: 800px;
+            margin: auto;
+            
+        }
+        header {
+            text-align: center;
+        }
+        .Poster{
+            width:20%;
+            float:left;
+        }
+        .Descricao{
+            width: 80%;
+            float:left;
+        }
+        #listas {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+            width: 100%;
+        }
+        #listas li {
+            float: left;
+            
+            margin: 5px;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+        #listas li img {
+            width: 120px;
+        }
+        .filme-info{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+<div id="container">
+   <header> 
+        <h1><a href="/">Movie Theater</a></h1>
+        <ul id="listas"></ul>
+        
+        <div class="filme-info">
+            <p class="Poster"><img src="{{poster_filme}}" width="120"/></p>
+            <div class="Descricao">
+                <h2>{{nome_filme}}</h2>
+                <p>{{descricao_filme}}</p>
+            </div>
+        </div>
+    </header>
 
-<h1><a href="/">Movie Theatre</a></h1>
-<p>Theaters</p>
-<ul id="listas"> 
-
-</ul>
+</div>
 <script type="module">
     console.log("Cinemas");
-    var response = await fetch("/api/cinemas")
-    var cinemas =await response.json();
-    console.log(cinemas);
+    var response = await fetch("/api/cinemas?id_filme={{id_filme}}")
+    var results = await response.json();
+    console.log(results);
     const listas = document.querySelector("#listas")
-    for (const [key, value] of Object.entries(cinemas))
+    for (const result of results)
     {
-        console.log(`${key}: ${value}`);
+        console.log(`${result}`);
         const li = document.createElement("li")
-        li.innerHTML = `<a href="/cinema?id_cinema=${key}">${value}</a>`
+        li.innerHTML = `<a href="/room?id_room=${result.id_room}">
+            <img src="https://gazettereview.com/wp-content/uploads/2017/04/movie-theater.jpg"/>
+            <div>${result.nome_cinema}</div>
+            </a>`
         listas.append(li)
     }
 </script>

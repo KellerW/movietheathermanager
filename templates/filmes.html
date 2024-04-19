@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+    <style>
+        #container {
+            width: 800px;
+            margin: auto;
+            
+        }
+        header {
+            text-align: center;
+        }
+        #listas {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+        #listas li {
+            float: left;
+            
+            margin: 5px;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+        #listas li img {
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <header>
+        <h1><a href="/">Movie Theater</a></h1>
+        <p>Filmes</p>
+    </header>
+    <ul id="listas"> 
+
+    </ul>
+</div>
+
+<script type="module">
+    console.log("Filmes");
+    var response = await fetch("/api/filmes")
+    var result =await response.json();
+    console.log(result);
+    const listas = document.querySelector("#listas")
+    for (const [id_filme, filme] of Object.entries(result))
+    {
+        //console.log(`${key}: ${value}`);
+        const li = document.createElement("li")
+        li.innerHTML = `<a href="/cinemas?id_filme=${id_filme}">
+            <img src="${filme.poster}" />
+            <div>${filme.nome}</div>
+            </a>`
+        listas.append(li)
+    }
+</script>
+</form>
+</body>
+</html>

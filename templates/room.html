@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+    <style>
+        #container {
+            width: 800px;
+            margin: auto;
+        }
+        header {
+            text-align: center;
+        }
+        #listas {
+            padding: 0;
+            list-style: none;
+        }
+        #listas li {
+            float: left;
+            width: 80px;
+            height: 80px;
+            display: block;
+            text-align: center;
+            line-height: 80px;
+            margin: 5px;
+            border: 1px solid #666;
+            background: #999;
+            
+        }
+        #listas li.selected {
+            background: green;
+        }
+    </style>
+</head>
+
 <body>
-
-<h1><a href="/">Movie Theare</a></h1>
-<p>Filme: {{nome_filme}}</p>
-<ul id="listas"> 
-
-</ul>
-
+<div id="container">
+    <header>
+        <h1><a href="/">Movie Theater</a></h1>
+        <p>{{nome_filme}}</p>
+        <p>Theater: {{nome_cinema}}</p>
+        <p><img src="{{poster_filme}}" width="120"/></p>
+    </header>
+    <ul id="listas"> 
+    </ul>
+</div>
 <script type="module">
-    console.log("Sala!");
-    // var response = await fetch("/api/filmes?id_cinema={{id_cinema}}")
-    // var results = await response.json();
-    // console.log(results);
-    // const listas = document.querySelector("#listas")
-    // for (const result of results)
-    // {
-    //     console.log(`${result}`);
-    //     const li = document.createElement("li")
-    //     li.innerHTML = `<a href="/room?id_room=${result.id_room}">${result.nome_filme}</a>`
-    //     listas.append(li)
-    // }
+    console.log("room");
+    var response = await fetch("/api/room?id_room={{id_room}}")
+    var results = await response.json();
+    console.log(results);
+    const listas = document.querySelector("#listas")
+    let index = 1;
+    for (const result of results)
+    {
+         const li = document.createElement("li")
+         li.innerHTML = `${index}`
+         li.setAttribute("data-chair-index", index - 1)
+         li.onclick = seat_click
+         if (result) {
+             li.classList.add("selected")
+         }
+         listas.append(li)
+         index++
+    }
+    async function seat_click(event) {
+        const li = event.target
+        const index = li.getAttribute("data-chair-index")
+        console.log("click", index)
+        const response = await fetch(
+            `/api/reserve-seat?id_room={{id_room}}&chair_index=${index}`)
+        li.classList.add("selected")
+    }
 </script>
 </form>
 </body>
