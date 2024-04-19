@@ -14,20 +14,51 @@
             padding: 0;
             list-style: none;
         }
+        .filme-info{
+            float: left;
+            margin-right: 10px;
+            width: 200px;
+            overflow: hidden;
+        }
         #listas li {
             float: left;
             width: 80px;
             height: 80px;
             display: block;
             text-align: center;
-            line-height: 80px;
+            line-height: 50px;
             margin: 5px;
-            border: 1px solid #666;
+            --border: 1px solid #666;
             background: #999;
-            
+            cursor: pointer;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8AAAAdHR37+/t+fn41NTVnZ2eCgoIiIiKxsbGPj4/y8vKcnJxLS0vs7OwTExO5ublERETf39/JycnT09PZ2dmVlZVQUFC8vLzn5+dfX19ubm5kZGSKiopUVFQNDQ09PT0nJyepqambm5syMjJ3d3e0BwjuAAAHUUlEQVR4nO2d6XqqOhRArThUKYoM4kRB277/K96THehFBSXDJjs26885bT+TLAkZN2E00oUXhR/HoDyv31RYn8vg+BFGnrZy6WEV54GS2D1BHq9Ma9V44admu5rPkMKlTI5IepxjYtgvvqqcxTQ7HCfLrTzLyfGQTYtmokFMxG8z36W6bpxVuptvCDiuTr9lOIX6W4VV2EjfSKPzUWdfXnykLPxLWWfygZRFN/u6FmW4VSjO6rtgj5rPHbvaD7+pS2rHHXpWDfIq08UguS2q3PJBcgNmPMfJUP2xN+EZzobKLxu+1lR3RTbId+qVJu78qmUrB1D0eFZH/Jxu4KPDDb7iATKao+dzzxxyPmBn8wPZbLGzaWULef/gZnIZutm+gndSF8wsEt5LYGbxEN5rII4y/PMgd8IDoBU4Y42Dq+bs3eS823tHbchj7DrSA36fYI32x+j3eQ+grRvjpA2NdYaTtgAZWne1gvoRYSQtRATlwJj05yZ7wiZYBfGh/lNYv/SgPdDfYyzNrJa0AStES+3JslTXeF2tCD5sjehONTQ34L4HWvVQc6KfWA2YDNCsf+pNc4+QpgLwfetdZLgMvpz3kJ3+0dUB495WQPscxx8bWZrphs1yxjpb9pTCmLsJ3DWpxgS3+u9sNfa6Oy9WKaYURmw13lTzbcPSO2lMTx22tzjVmJ6pJdJu5nobd6j1w+wz9WWht2XYmV+fuSXROwRZ0JjdN4n0VqsLtc6iunH09dDMsKAyseCsioeGXv5WilS6D91jJHVgHNm55JCwxflSILml6aXue2Dxu2slg+/DiaxI2GWYwEqV2AaSTYZeHSciNGq1yDCZcr9SbOJhj2F9AUXXGm0xTM/cbyo8c7TEcCt5AUe2GFbBYWeZAbQdhjxUS26SZ4chi9VaS86ArDD0WDMju+lmheG+eDRSfYIVhqnKjNEKQ5j1ywZpWGEYqkzTrTD8YoayhbTCcPLyhjPBaf0VVhhmKuvyNhhChy8dF2qDoS85q+DYYLhSWkC1wTBS2nkgbBh+bjjfsDpT/TAXLSxdw/oJs1tEA2PoGs47DAvB0tI1zDsMRYMo6RpCmGKQBQ0ytuR9FkyOruGiZTDKopu+BZOjawiPD9xso7H1mo1gcnQN05ZpL/uLaEQYccObSFP2K9HHv+gaRi1jNZkBKl3DlgU2X2aAStfQZ/9c7xRKRWnQNRyx4ej1Qr5UpA1hQ9Y1XM/s45bm9SmEDYO7zg8MRTcQ2cbcu77SaaG6AQ93RYPpxnXwT7x4Ahyjsob/6gzLlSUKWUnYUyWnMIQTcsJmYeFZ7EUILKC2zjqG5+2Yj1CMhco7qx+6643ooF0/m+eFbLLi457+mL8dp2IFTv+KYez3AM40oWH47fUpcNww7LcK90nGsF8Me/KnDPt1c7YZpg3DMuhBtiZjWGTPixsE5V9pSyOxDyCdZiBA+byQTaKRJ/YB84/odS0Cd/BvShSd2F4GXPt6Y+MWCCvmWx6m/f6xhJKwIo07yguX+XtTluXp/5XGqmVthz26Zn5Aes35QYVq7QHjtl/WsOkHxRlw1wl1rcFDztAZDo0zdIY3OEMDOENneMPrGMb+qg3/RNTw1FHe1s2ZpyvJFA0f8vcMny5mWGd4NxV8th1gm2FLRM2ue3uNalt6CjuLLLjN/UXUUN8RPFuihvpOFnSGBnCGgry+4cu3pXt4ac+UFqxIBy2nAvlbwa2QQSm3ysfmbJ/nYhi1qpo+Hd8S4F0hUCv8TSQ4zKhxCH6/fukDd2vBPKF1RlSNn+RqitUzRTlNPY5fOUqdTQfx0m8FhWjER6T8VYIylwFOI/6mdQ5dG3t4Lk/iFGe+cEPrKMF2eKyF+GkKmXT1HhxoMALRT8Giaqm/NCjAqEv0CdmlzIdMAZdDdKLB2pkzrelEN/AsvmBbA10FheCZfszFOwyI/jYftd4XeNBS7PjRxKbbUKq4O1s6Q04k3rWFFhqKDb+dITGcYQvOkBjOsAVnSAxn2IIzJIYzbMEZEsMZtuAMiSFrSH/PomYvaXic2MJR0tAynOGfNBzbg6RhOvLsoPVguj6Gr98fOkM6OMMWXt/w9XfXEvEvxSRQ5cR2SGEfv+vxPnrAmXOCL9mEgCFbNvJhG180ZIi/4mue0g848VJ+bLnw5aiiu9emR5xPWfOClsJfja9ryD8QEuGXPKrREuSiRL0v0+XuzZd0cxFflnMOvGvoUP3ww+Jys3w+HDlr24uf6id2LOvbpP7TRfZFXTcXlCVaDwF8dnfLvsRNDvaKgN8X/EIHr7uVh4anbpBXhgzrPh26Mt0B9s4QG2eojjPExhmq4wyxcYbqOENsnKE6zhAbZ6iOM8TGGarjDLFxhuo4Q2ycoTrOEBtnqI4zxMYZquMMsXGG6jhDbAYyJBWpgGI423Ly+/d9Y8MMi7zKf4ZmeMXwhtfgG35pzuEx9/FZ2o9zvMtBTyRSX3Z3+WvPIrl+s2Kh78T3fmyLq/ynvWOe/wNU+5g8rn5gdwAAAABJRU5ErkJggg==);
+            background: url(https://media.istockphoto.com/id/907760392/vector/cinema-seat-isolated-on-white.jpg?s=612x612&w=0&k=20&c=ilPHpntrwp7taVQNeqTwvNNTL6UTcuplK8XtMOHfA1w=);
+            background-size: cover;
+            position: relative;
+            text-shadow: 1px 1px #fff;
+        }
+        #listas li:hover {
+            opacity: 0.8;
         }
         #listas li.selected {
-            background: green;
+            cursor:not-allowed;
+        }
+        #listas li.selected:hover {
+            opacity: 1;
+        }
+        #listas li.selected .overlay {
+            width: 80px;
+            height: 80px; 
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        #listas li.selected .overlay {
+            background-size: 80% 80%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            --background-color: rgba(128, 128, 128, 0.3);
+            background-image: url(https://www.freeiconspng.com/uploads/x-png-11.png);
         }
     </style>
 </head>
@@ -36,9 +67,11 @@
 <div id="container">
     <header>
         <h1><a href="/">Movie Theater</a></h1>
+        <div class="filme-info">
         <p>{{nome_filme}}</p>
         <p>Theater: {{nome_cinema}}</p>
         <p><img src="{{poster_filme}}" width="120"/></p>
+        </div>
     </header>
     <ul id="listas"> 
     </ul>
@@ -60,6 +93,9 @@
              li.classList.add("selected")
          }
          listas.append(li)
+         const overlay = document.createElement("div")
+         overlay.classList.add("overlay")
+         li.append(overlay)
          index++
     }
     async function seat_click(event) {
