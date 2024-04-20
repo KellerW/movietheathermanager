@@ -59,12 +59,8 @@ cd /build
 ```
 ## Running in Containers 
 ### Installing Docker Dependencies
- - First, ensure Docker is installed on your system. If not, you can install it by following these steps:
+ - First, ensure Docker is installed on your system. If not, you can install it by following these steps [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
 
-```
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-```
 # For other distributions or macOS/Windows, refer to the official Docker documentation.
 ### Building the Container 
 Once Docker is installed, you can build the container image for your application:
