@@ -1,10 +1,8 @@
 #include "Room.hpp"
 /**
- * @brief Construct a new Room:: Room object
+ * @file Room.cpp
  * 
- * @param id_r 
- * @param id_cinema 
- * @param size 
+ * @brief Implementation of the Room class.
  */
 
 Room::Room(int id_r, int id_cinema, int size) 

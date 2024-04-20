@@ -1,16 +1,15 @@
 /**
  * @file DataBuilder.cpp
- * @author Wagner Keller (wagner.keller@gmail.com)
- * @brief 
- * @version 0.1
- * @date 2024-04-20
  * 
- * @copyright Copyright (c) 2024
- * 
+ * @brief Implementation of the DataBuilder class.
  */
 #include <map>
 #include "DataBuilder.hpp"
 
+/**
+ * @brief Constructs a new DataBuilder object and initializes 
+ * cinema, film, room, and room-film data.
+ */
     DataBuilder::DataBuilder ()
     {
         this->cinemas = buildCinemas();
@@ -18,7 +17,11 @@
         this->rooms = buildRooms();
         this->room_filme = buildRoomFilme();
     }
-
+/**
+ * @brief Constructs and returns a map of cinemas.
+ * 
+ * @return A map containing cinemas.
+ */
     std::map<int, Cinema> DataBuilder::buildCinemas() 
     {
         std::map<int, Cinema> cinemas;
@@ -27,6 +30,12 @@
         cinemas.emplace(3, Cinema(3, "Cine Santana"));
         return cinemas;
     }
+
+/**
+ * @brief Constructs and returns a map of films.
+ * 
+ * @return A map containing films.
+ */
     std::map<int, Filme> DataBuilder::buildFilmes()
     {
         std::map<int, Filme> filmes;
@@ -35,8 +44,13 @@
         filmes.emplace(3, Filme(3, "Predator", "Dutch é contratado pelo governo dos Estados Unidos para resgatar políticos presos na Guatemala. Mas quando ele e sua equipe chegam na América Central, logo percebem que há algo errado. Depois de descobrir vários cadáveres, a equipe descobre que está sendo caçada por uma criatura brutal com força sobre-humana e uma capacidade surpreendente de se camuflar.", "https://images.justwatch.com/poster/295973376/s718/predator.%7Bformat%7D"));
      //   filmes.emplace(4, Filme(3, "JAVA", "Dutch é contratado pelo governo dos Estados Unidos para resgatar políticos presos na Guatemala. Mas quando ele e sua equipe chegam na América Central, logo percebem que há algo errado. Depois de descobrir vários cadáveres, a equipe descobre que está sendo caçada por uma criatura brutal com força sobre-humana e uma capacidade surpreendente de se camuflar.", "https://images.justwatch.com/poster/295973376/s718/predator.%7Bformat%7D"));
         return filmes;
-
     }
+    
+    /**
+     * @brief Constructs and returns a map of rooms.
+     * 
+     * @return A map containing rooms.
+     */
     std::map<int, Room> DataBuilder::buildRooms()
     {
         std::map<int, Room> rooms;
@@ -49,6 +63,12 @@
         return rooms;
 
     }
+
+    /**
+     * @brief Constructs and returns a vector of pairs representing room-film associations.
+     * 
+     * @return A vector containing pairs of room and film IDs.
+     */
     std::vector<std::pair<int, int>> DataBuilder::buildRoomFilme()
     {
         return 

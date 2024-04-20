@@ -1,12 +1,31 @@
+/*********************************************************************
+ * @file  Controller.cpp
+ * 
+ * @brief Implementation of the class Controller.
+ *********************************************************************/
+
 #include "Controller.hpp"
 
 void Controller::setupRoutes() 
-{
+{       
+        /**
+         * @brief Handles requests to the / endpoint and constructs a JSON response with film data.
+         *
+         * @param req The request object (not used in this function)
+         * @return A JSON object containing film data
+        */
+        
         CROW_ROUTE(app, "/")
         ([]() {
             return crow::mustache::load("filmes.html").render();
         });
-
+        /**
+         * @brief Handles requests to the /api/filmes endpoint and constructs a JSON response with film data.
+         *
+         * @param req The request object (not used in this function)
+         * @return A JSON object containing film data
+        */
+        
         CROW_ROUTE(app, "/api/filmes")
         ([&]() {
             crow::json::wvalue result = {};
@@ -21,6 +40,13 @@ void Controller::setupRoutes()
             return result;
         });
 
+       /**
+         * @brief Handles requests to the /cinemas endpoint and constructs a JSON response with film data.
+         *
+         * @param req The request object (not used in this function)
+         * @return A JSON object containing film data
+        */
+        
         CROW_ROUTE(app, "/cinemas")
         ([&](const crow::request& req) {
             auto id_filme = req.url_params.get("id_filme");
@@ -34,6 +60,13 @@ void Controller::setupRoutes()
             return crow::mustache::load("cinemas.html").render(ctx);
         });
 
+        /**
+         * @brief Handles requests to the /api/cinemas endpoint and constructs a JSON response with film data.
+         *
+         * @param req The request object (not used in this function)
+         * @return A JSON object containing film data
+        */
+        
         CROW_ROUTE(app, "/api/cinemas")
         ([&](const crow::request& req) {
             crow::json::wvalue result = {};
@@ -54,7 +87,14 @@ void Controller::setupRoutes()
             }
             return result;
         });
-
+        
+        /**
+         * @brief Handles requests to the /room endpoint and constructs a JSON response with film data.
+         *
+         * @param req The request object (not used in this function)
+         * @return A JSON object containing film data
+        */
+       
         CROW_ROUTE(app, "/room")
         ([&](const crow::request& req) {
             auto id_room = std::stoi(req.url_params.get("id_room"));
@@ -80,6 +120,13 @@ void Controller::setupRoutes()
             return crow::response(crow::mustache::load("room.html").render(ctx));
         });
 
+        /**
+         * @brief Handles requests to the /api/room endpoint and constructs a JSON response with film data.
+         *
+         * @param req The request object (not used in this function)
+         * @return A JSON object containing film data
+        */
+        
         CROW_ROUTE(app, "/api/room")
         ([&](const crow::request& req) {
             crow::json::wvalue result = {};
@@ -93,6 +140,13 @@ void Controller::setupRoutes()
             return result;
         });
 
+        /**
+         * @brief Handles requests to the /api/reserve-seat endpoint and constructs a JSON response with film data.
+         *
+         * @param req The request object (not used in this function)
+         * @return A JSON object containing film data
+        */
+        
         CROW_ROUTE(app, "/api/reserve-seat")
         ([&](const crow::request& req) {
             crow::json::wvalue result = {};
@@ -105,5 +159,9 @@ void Controller::setupRoutes()
             return 204;
         });
 
-        app.port(8888).multithreaded().run();
+    /**
+     * @brief Run the server.
+    */
+   
+    app.port(8888).multithreaded().run();
 }
