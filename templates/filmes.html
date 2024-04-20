@@ -50,7 +50,6 @@
     const listas = document.querySelector("#listas")
     for (const [id_filme, filme] of Object.entries(result))
     {
-        //console.log(`${key}: ${value}`);
         const li = document.createElement("li")
         li.innerHTML = `<a href="/cinemas?id_filme=${id_filme}">
             <img src="${filme.poster}" />

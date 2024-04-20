@@ -9,7 +9,16 @@ RUN rm -rf /var/lib/apt/lists/*
 
 RUN wget https://letsencrypt.org/certs/isrg-root-x1-cross-signed.pem \
 && mkdir -p /etc/ssl/certs/ && cp -r isrg-root-x1-cross-signed.pem /etc/ssl/certs/ 
-  
+
+RUN mkdir /home/gtest \ 
+&& cd /home/gtest \         
+&& git clone https://github.com/google/googletest.git \
+&& cd /home/gtest/googletest \
+&& mkdir build \
+&& cd build \
+&& cmake .. \
+&& make -j8\
+&& make install
 RUN mkdir /home/crow \ 
 && cd /home/crow \         
 && git clone https://github.com/CrowCpp/Crow.git \
@@ -17,7 +26,7 @@ RUN mkdir /home/crow \
 && mkdir build \
 && cd build \
 && cmake .. -DCROW_BUILD_EXAMPLES=OFF -DCROW_BUILD_TESTS=OFF \
-&& make \
+&& make -j8 \
 && make install
 RUN mkdir /home/gitroot \      
 && cd /home/gitroot \        
