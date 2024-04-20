@@ -1,10 +1,22 @@
-# Movie Manager Applicaton 
-
+# Movie Manager Applicaton Example
 ## Pre-requiriments 
 
-### For compile and run in local host machine without the container install the following depencies: 
+### For Local Development 
+To compile and run the application on your local machine without using containers, you need to install the following dependencies:
 
-- Goolge the Test framework :
+- [Google Test Framework](https://github.com/google/googletest): A testing framework for C++ code.
+- [Crow Framework](https://github.com/CrowCpp/Crow): A lightweight and fast C++ micro web framework.
+
+Follow these steps to install the dependencies:
+
+1.Installing Compiler, Build Tools and Visual Code 
+```
+bash
+sudo apt update
+sudo apt install build-essential
+sudo snap install code --classic
+```
+2.Goolge the Test framework :
 ```
 mkdir /home/gtest  
 cd /home/gtest          
@@ -16,7 +28,7 @@ cmake ..
 make -j8
 make install
 ```
-- The Crow Framework
+3.The Crow Framework
 ```
 mdir /home/crow 
 cd /home/crow          
@@ -40,17 +52,48 @@ cd build
 cmake .. 
 make -j8
 ```
-## Install depencies for Docker Container
+Go to the folder /build and run the application Movie manager: 
+```
+cd /build
+./MovieManager
+```
+## Running in Containers 
+### Installing Docker Dependencies
+ - First, ensure Docker is installed on your system. If not, you can install it by following these steps:
 
-- Install the dependences for docker to use the docker container: 
 ```
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
-## To biuld the Container 
+# For other distributions or macOS/Windows, refer to the official Docker documentation.
+### Building the Container 
+Once Docker is installed, you can build the container image for your application:
 ```
 docker build -t moviemanager .
 ```
-## To run the container 
+### Running the Container
+Ensure Docker is installed and the user has permissions to access Docker without sudo. Follow the steps provided in the reference here.
+
+After successfully building the container image, you can run it using the following command:
 ```
 docker container run -it -p 8888:8888 moviemanager
 ```
+This command starts a container based on the moviemanager image, allowing access to the application running on port 8888. Adjust the port mapping as needed for your application.
+
+Dont Run with Sudo permission, add the user and run without sudo following the 
+the reference: 
+[here](https://betterstack.com/community/questions/how-to-fix-permission-denied-error-when-connecting-to-docker/)
+
+
+# Accessing the Application
+Once the application is running, access it by navigating to `http://localhost:8888` in your web browser.
+              
+## Folder Structure
+- `src`: Contains the source code for the Movie Manager Application.
+- `tests`: Contains unit tests for the application.
+- `docs`: Contains documentation files.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+## License
+This project is licensed under the [MIT License](LICENSE).
