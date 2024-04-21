@@ -54,4 +54,4 @@ RUN cp -r /home/gitroot/movietheathermanager/build/ /home/mvm/app/
 ENV APP_DIRECTORY /home/mvm/app/build/
 EXPOSE 8888/tcp
 WORKDIR ${APP_DIRECTORY}
-#CMD ["/home/mvm/app/build/MovieManager"]
+CMD ["/home/mvm/app/build/MovieManager"]
