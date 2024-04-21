@@ -16,7 +16,7 @@ ${CMAKE_SOURCE_DIR}/src/models/Filme.cpp ${CMAKE_SOURCE_DIR}/src/models/Filme.hp
 ${CMAKE_SOURCE_DIR}/src/models/Room.cpp ${CMAKE_SOURCE_DIR}/src/models/Room.hpp)
 
 # Create a target for the model tests
-add_executable(ModelTests ../tests/ModelTest.cpp ${MODEL_SOURCES})
+add_executable(ModelTests ../tests/ModelTest.cpp ../tests/main_test.cpp ${MODEL_SOURCES})
 
 # Link ModelTests with GTest and pthread library
 target_link_libraries(ModelTests GTest::GTest GTest::Main pthread)
