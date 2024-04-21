@@ -4,8 +4,8 @@ MAINTAINER Wagner Keller"wagner.keller@gmail.com"
 RUN echo "check-certificate = off" >> ~/.wgetrc
 RUN DEBIAN_FRONTEND=noninteractive
 RUN apt-get update 
-RUN apt-get install -y build-essential wget cmake libasio-dev git python3 
-RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y build-essential wget cmake libasio-dev git python3 doxygen graphviz
+RUN rm -rf /var/lib/apt/lists/* 
 RUN wget https://letsencrypt.org/certs/isrg-root-x1-cross-signed.pem \
 && mkdir -p /etc/ssl/certs/ && cp -r isrg-root-x1-cross-signed.pem /etc/ssl/certs/ 
 RUN apt update
