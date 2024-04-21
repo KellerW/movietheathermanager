@@ -1,0 +1,8 @@
+<map id="src/models/Filme.hpp" name="src/models/Filme.hpp">
+<area shape="rect" id="node1" title="Declaration of the Filme class." alt="" coords="241,5,402,32"/>
+<area shape="rect" id="node2" href="$_data_builder_8hpp.html" title="Implementation of the Builder design pattern." alt="" coords="118,80,319,107"/>
+<area shape="rect" id="node6" href="$_filme_8cpp.html" title="Declaration of the Filme class." alt="" coords="344,80,504,107"/>
+<area shape="rect" id="node3" href="$_controller_8hpp_source.html" title=" " alt="" coords="5,155,208,181"/>
+<area shape="rect" id="node5" href="$_data_builder_8cpp.html" title="Implementation of the DataBuilder class." alt="" coords="232,155,432,181"/>
+<area shape="rect" id="node4" href="$_controller_8cpp_source.html" title=" " alt="" coords="6,229,207,256"/>
+</map>

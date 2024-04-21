@@ -1,5 +1,5 @@
 /**
- * @file Filme.hpp
+ * @file Filme.cpp
  * 
  * @brief Declaration of the Filme class.
  */
