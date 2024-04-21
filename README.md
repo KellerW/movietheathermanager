@@ -9,14 +9,26 @@ To compile and run the application on your local machine without using container
 
 Follow these steps to install the dependencies:
 
-1.Installing Compiler, Build Tools and Visual Code 
+1. Installing Compiler, Build Tools and Visual Code 
 ```
 bash
 sudo apt update
-sudo apt install build-essential
+sudo apt install build-essential cmake git
+sudo apt install python3
 sudo snap install code --classic
 ```
-2.Goolge the Test framework :
+2. Conan Install steps
+```
+Install Python (3.7+) 
+pip install --user -U conan
+source ~/.bashrc
+conan 
+conan profile detect --force
+vim conan profile path default
+Set Conan for C++ 17. 
+```
+#### STEPS 2 and 4 involve manual compilation.
+3. Goolge the Test framework :
 ```
 mkdir /home/gtest  
 cd /home/gtest          
@@ -28,7 +40,7 @@ cmake ..
 make -j8
 make install
 ```
-3.The Crow Framework
+4. The Crow Framework
 ```
 mdir /home/crow 
 cd /home/crow          

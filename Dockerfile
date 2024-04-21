@@ -7,27 +7,36 @@ RUN apt-get update
 RUN apt-get install -y build-essential wget cmake libasio-dev git python3 
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN wget https://letsencrypt.org/certs/isrg-root-x1-cross-signed.pem \
-&& mkdir -p /etc/ssl/certs/ && cp -r isrg-root-x1-cross-signed.pem /etc/ssl/certs/ 
-
-RUN mkdir /home/gtest \ 
-&& cd /home/gtest \         
-&& git clone https://github.com/google/googletest.git \
-&& cd /home/gtest/googletest \
-&& mkdir build \
-&& cd build \
-&& cmake .. \
-&& make -j8\
-&& make install
-RUN mkdir /home/crow \ 
-&& cd /home/crow \         
-&& git clone https://github.com/CrowCpp/Crow.git \
-&& cd /home/crow/Crow \
-&& mkdir build \
-&& cd build \
-&& cmake .. -DCROW_BUILD_EXAMPLES=OFF -DCROW_BUILD_TESTS=OFF \
-&& make -j8 \
-&& make install
+#RUN wget https://letsencrypt.org/certs/isrg-root-x1-cross-signed.pem \
+#&& mkdir -p /etc/ssl/certs/ && cp -r isrg-root-x1-cross-signed.pem /etc/ssl/certs/ 
+RUN apt update
+RUN apt install python3 python3-pip -y
+RUN apt-get update && \
+    apt-get install -y python3-pip && \
+    pip3 install --upgrade pip && \
+    pip3 install conan
+COPY default /root/.conan/profiles/default
+#&& source ~/.bashrc \
+#&& conan \
+#&& conan profile detect 
+# RUN mkdir /home/gtest \ 
+# && cd /home/gtest \         
+# && git clone https://github.com/google/googletest.git \
+# && cd /home/gtest/googletest \
+# && mkdir build \
+# && cd build \
+# && cmake .. \
+# && make -j8\
+# && make install
+# RUN mkdir /home/crow \ 
+# && cd /home/crow \         
+# && git clone https://github.com/CrowCpp/Crow.git \
+# && cd /home/crow/Crow \
+# && mkdir build \
+# && cd build \
+# && cmake .. -DCROW_BUILD_EXAMPLES=OFF -DCROW_BUILD_TESTS=OFF \
+# && make -j8 \
+# && make install
 RUN mkdir /home/gitroot \      
 && cd /home/gitroot \        
 && git clone https://github.com/KellerW/movietheathermanager.git \
