@@ -5,7 +5,7 @@
  * implemented in C++ using the MVC (Model-View-Controller) architecture.
  */
 #include "Controller.hpp"
-
+#include <gtest/gtest.h>
 /**
  * @brief Main function of the Movie Manager application.
  * 

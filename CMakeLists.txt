@@ -6,14 +6,15 @@ set(EXECUTABLE_NAME MovieManager)
 set(LIBRARY_MODELS Models)
 set(LIBRARY_BUILDER Builder)
 set(LIBRARY_CONTROLLER Controller)
-
-include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake)
+set(Crow_INCLUDE_DIRS "/home/wkeller/movietheathermanager/build") 
+include(./build/conan_toolchain.cmake)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 find_package(Crow REQUIRED)
 find_package(GTest CONFIG REQUIRED)
+
 add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(${PROJECT_NAME} PUBLIC Crow::Crow ${LIBRARY_MODELS} ${LIBRARY_CONTROLLER})
+target_link_libraries(${PROJECT_NAME} PUBLIC Crow::Crow GTest::gtest_main ${LIBRARY_MODELS} ${LIBRARY_CONTROLLER})
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED On)
@@ -28,7 +29,8 @@ file(COPY templates DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
    COMMAND cp -rf
    ${CMAKE_SOURCE_DIR}/templates/ $<TARGET_FILE_DIR:${PROJECT_NAME}>/templates/)
-   
+
+include(GoogleTest)  
 add_subdirectory(src)
 
 

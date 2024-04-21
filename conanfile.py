@@ -7,7 +7,6 @@ class CompressorRecipe(ConanFile):
     generators = "CMakeDeps"
 
     def requirements(self):
-        self.requires("crowcpp-crow/1.1.0")
         self.requires("gtest/1.14.0")
 
     def generate(self):
