@@ -13,7 +13,7 @@ Follow these steps to install the dependencies:
 ```
 bash
 sudo apt update
-sudo apt install build-essential cmake git
+sudo apt install build-essential cmake git libasio-dev
 sudo apt install python3
 sudo snap install code --classic
 ```
@@ -42,13 +42,13 @@ make install
 ```
 4. The Crow Framework
 ```
-mdir /home/crow 
-cd /home/crow          
+mkdir /home/${USER}/crow 
+cd /home/${USER}/crow          
 git clone https://github.com/CrowCpp/Crow.git 
-cd /home/crow/Crow 
+cd /home/${USER}/crow/Crow 
 mkdir build 
 cd build 
-cmake .. -DCROW_BUILD_EXAMPLES=OFF -DCROW_BUILD_TESTS=OFF 
+cmake -DCROW_BUILD_EXAMPLES=OFF -DCROW_BUILD_TESTS=OFF .. 
 make -j8 
 make install
 ```
