@@ -1,4 +1,4 @@
-build/
+[bB]uild/
 build/.ninja_deps
 build/.ninja_log
 build/.ninja_deps
@@ -8,3 +8,5 @@ build/cmake_install.cmake
 build/MovieManager
 build/CMakeFiles/CMakeConfigureLog.yaml
 build/CMakeFiles/MovieManager.dir/main.cpp.o
+docs/
+
