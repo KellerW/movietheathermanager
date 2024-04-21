@@ -1,8 +1,0 @@
-<map id="src/models/Cinema.hpp" name="src/models/Cinema.hpp">
-<area shape="rect" id="node1" title="The Cinema class represents a cinema entity." alt="" coords="111,5,285,32"/>
-<area shape="rect" id="node2" href="$_cinema_8cpp.html" title="Construct a new Cinema object." alt="" coords="5,80,180,107"/>
-<area shape="rect" id="node3" href="$_data_builder_8hpp.html" title="Implementation of the Builder design pattern." alt="" coords="204,80,405,107"/>
-<area shape="rect" id="node4" href="$_controller_8hpp_source.html" title=" " alt="" coords="90,155,293,181"/>
-<area shape="rect" id="node6" href="$_data_builder_8cpp.html" title="Implementation of the DataBuilder class." alt="" coords="317,155,517,181"/>
-<area shape="rect" id="node5" href="$_controller_8cpp_source.html" title=" " alt="" coords="91,229,292,256"/>
-</map>

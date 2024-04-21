@@ -1,9 +1,0 @@
-<map id="src/models/DataBuilder.hpp" name="src/models/DataBuilder.hpp">
-<area shape="rect" id="node1" title="Implementation of the Builder design pattern." alt="" coords="89,5,290,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,56,107"/>
-<area shape="rect" id="node3" href="$_cinema_8hpp.html" title="The Cinema class represents a cinema entity." alt="" coords="81,80,181,107"/>
-<area shape="rect" id="node5" href="$_filme_8hpp.html" title="Declaration of the Filme class." alt="" coords="205,80,291,107"/>
-<area shape="rect" id="node6" href="$_room_8hpp_source.html" title=" " alt="" coords="316,80,404,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="160,155,219,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="329,155,391,181"/>
-</map>
