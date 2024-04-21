@@ -45,6 +45,7 @@ RUN mkdir /home/gitroot \
 && rm -rf build \ 
 && mkdir build \
 && cd build \
+&& conan profile detect \
 && conan install .. -s build_type=Release -s compiler.cppstd=17 --output-folder=. --build missing \
 && cmake .. 
 # && make -j8
