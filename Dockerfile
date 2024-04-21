@@ -16,6 +16,7 @@ RUN apt-get update && \
     pip3 install --upgrade pip && \
     pip3 install conan
 COPY default /root/.conan/profiles/default
+
 #&& source ~/.bashrc \
 #&& conan \
 #&& conan profile detect 
@@ -41,11 +42,12 @@ RUN mkdir /home/gitroot \
 && cd /home/gitroot \        
 && git clone https://github.com/KellerW/movietheathermanager.git \
 && cd movietheathermanager \
-&& rm -r build \ 
+&& rm -rf build \ 
 && mkdir build \
 && cd build \
+&& conan install .. -s build_type=Release -s compiler.cppstd=17 --output-folder=. --build missing
 && cmake .. \
-&& make -j8
+# && make -j8
 
 WORKDIR /home/
 VOLUME ["/home/gitroot"]
@@ -57,4 +59,4 @@ RUN cp -r /home/gitroot/movietheathermanager/build/ /home/mvm/app/
 ENV APP_DIRECTORY /home/mvm/app/build/
 EXPOSE 8888/tcp
 WORKDIR ${APP_DIRECTORY}
-CMD ["/home/mvm/app/build/MovieManager"]
+#CMD ["/home/mvm/app/build/MovieManager"]
