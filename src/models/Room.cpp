@@ -2,7 +2,7 @@
 /**
  * @file Room.cpp
  * 
- * @brief Implementation of the Room class.
+ * @brief Implements of the Room class.
  */
 
 Room::Room(int id_r, int id_cinema, int size) 

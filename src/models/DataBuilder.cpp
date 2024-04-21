@@ -1,7 +1,7 @@
 /**
  * @file DataBuilder.cpp
  * 
- * @brief Implementation of the DataBuilder class.
+ * @brief Implementation of the DataBuilder class instances.
  */
 #include <map>
 #include "DataBuilder.hpp"

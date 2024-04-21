@@ -4,7 +4,7 @@
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Movie Manager Application"
 PROJECT_NUMBER         =
-PROJECT_BRIEF          =
+PROJECT_BRIEF          = "An Movie Manager Application in C++"
 PROJECT_LOGO           =
 OUTPUT_DIRECTORY       = docs
 CREATE_SUBDIRS         = NO

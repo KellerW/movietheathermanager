@@ -30,7 +30,8 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
    COMMAND cp -rf
    ${CMAKE_SOURCE_DIR}/templates/ $<TARGET_FILE_DIR:${PROJECT_NAME}>/templates/)
 
+enable_testing()   
 include(GoogleTest)  
 add_subdirectory(src)
-
+add_subdirectory(tests)
 

@@ -1,5 +1,5 @@
 /**
- * @file Room.cpp
+ * @file Room.hpp
  * 
  * @brief Declaration of the Room class.
  */
