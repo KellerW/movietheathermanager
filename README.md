@@ -88,8 +88,11 @@ docker container run -it -p 8888:8888 moviemanager
 ```
 This command starts a container based on the moviemanager image, allowing access to the application running on port 8888. Adjust the port mapping as needed for your application.
 #### The home Screen:
+
 ![Screenshot from 2024-04-21 04-12-15](https://github.com/KellerW/movietheathermanager/assets/2254792/0684042a-7a7e-4f68-b963-8722bfcbfc93)
-Dont Run with Sudo permission, add the user and run without sudo following the 
+
+
+#### Dont Run with Sudo permission, add the user and run without sudo following the 
 the reference: 
 [here](https://betterstack.com/community/questions/how-to-fix-permission-denied-error-when-connecting-to-docker/)
 
