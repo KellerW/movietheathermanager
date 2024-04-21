@@ -92,7 +92,30 @@ Dont Run with Sudo permission, add the user and run without sudo following the
 the reference: 
 [here](https://betterstack.com/community/questions/how-to-fix-permission-denied-error-when-connecting-to-docker/)
 
+### Docker Utils
+#### Stop all the containers
+```
+docker stop $(docker ps -a -q)
+```
+#### Remove all the containers
+```
+docker rm $(docker ps -a -q)
+```
+#### To run a disposable new container, you can simply attach a tty and standard input:
+```
+docker run --rm -it --entrypoint bash <image-name-or-id>
+```
+#### Or to prevent the above container from being disposed, run it without --rm.
+#### Or to enter a running container, use exec instead:
+```
+docker exec -it <container-name-or-id> bash
+```
+#### Clean Up Containers
+```
+docker container prune
+```
 
+[reference](https://docs.docker.com/reference/cli/docker/container/rm/)
 # Accessing the Application
 Once the application is running, access it by navigating to `http://localhost:8888` in your web browser.
               
