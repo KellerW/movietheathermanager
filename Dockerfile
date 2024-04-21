@@ -36,6 +36,7 @@ RUN mkdir /home/gitroot \
 && cd /home/gitroot \        
 && git clone https://github.com/KellerW/movietheathermanager.git \
 && cd movietheathermanager \
+&& mkdir docs \
 && rm -rf build \ 
 && mkdir build \
 && cd build \
@@ -44,6 +45,8 @@ RUN mkdir /home/gitroot \
 && cmake -DCMAKE_BUILD_TYPE=Release  .. \
 && make -j8
 
+RUN cd /home/gitroot/movietheathermanager \
+&& doxygen 
 WORKDIR /home/
 VOLUME ["/home/gitroot"]
 RUN useradd -ms /bin/bash mvm

@@ -118,11 +118,40 @@ docker exec -it <container-name-or-id> bash
 ```
 docker container prune
 ```
-
+#### Run Container in root user 
+```
+docker exec -u root -t -i container_id /bin/bash
+```
 [reference](https://docs.docker.com/reference/cli/docker/container/rm/)
 # Accessing the Application
 Once the application is running, access it by navigating to `http://localhost:8888` in your web browser.
-              
+
+## To build the documentation:
+ 1. Create a directory named `docs` in the root project folder.
+ 2. Execute the following command:
+ 
+ ```
+ doxygen
+ ```
+ 
+### All documentation will be generated and located in `docs/html`. 
+
+## To build and Run the tests
+```
+rm -rf build
+mkdir build
+cd build && conan install .. -s build_type=Release -s compiler.cppstd=17 --output-folder=. --build missing
+cd build && cmake -DENABLE_UNIT_TEST=ON -DCMAKE_BUILD_TYPE=Release .. && make -j16
+
+```
+## Navigate to `build/tests` and run:
+```
+ctest -R ModelTests
+```
+## All tests and builds can be executed in the `container` with root user access. The project is located at `/home/gitroot/moviemanager`.
+
+### Install and configure Conan before use.
+
 ## Folder Structure
 - `src`: Contains the source code for the Movie Manager Application.
 - `tests`: Contains unit tests for the application.
