@@ -15,6 +15,11 @@ class Controller
         std::mutex mutex; /**< Mutex for ensuring thread safety. */
       
     public:
+    
+    Controller(DataBuilder* Ddata)  
+    {
+        data = *Ddata;
+    }
     /**
      * @brief Default constructor for creating a new Controller object.
     */

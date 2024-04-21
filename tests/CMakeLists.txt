@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.10)
-project(MyProjectTests)
+#cmake_minimum_required(VERSION 3.10)
+#project(UnitTest)
 
 # Locate GTest package
 find_package(GTest REQUIRED)
@@ -20,7 +20,6 @@ add_executable(ModelTests ../tests/ModelTest.cpp ../tests/main_test.cpp ${MODEL_
 
 # Link ModelTests with GTest and pthread library
 target_link_libraries(ModelTests GTest::GTest GTest::Main pthread)
-
 # Add the test to CTest
 enable_testing()
 add_test(NAME ModelTests COMMAND ModelTests)
