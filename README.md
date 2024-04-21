@@ -61,7 +61,7 @@ cd movietheathermanager
 rm -r build  
 mkdir build 
 cd build 
-cmake .. 
+cmake .. or cmake -DCMAKE_BUILD_TYPE=Debug  ..
 make -j8
 ```
 Go to the folder /build and run the application Movie manager: 
