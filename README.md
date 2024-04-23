@@ -1,4 +1,4 @@
-# Movie Manager Applicaton Example
+# Movie Manager Application Example
 ## Pre-requiriments 
 
 ### For Local Development 
