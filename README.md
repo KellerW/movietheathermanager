@@ -1,5 +1,5 @@
 # Movie Manager Application Example
-## Pre-requiriments 
+## Pre-requirements 
 
 ### For Local Development 
 To compile and run the application on your local machine without using containers, you need to install the following dependencies:
