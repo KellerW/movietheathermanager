@@ -60,9 +60,10 @@ git clone https://github.com/KellerW/movietheathermanager.git
 cd movietheathermanager 
 rm -r build  
 mkdir build 
-cd build 
+cd build
+conan install .. -s build_type=Release -s compiler.cppstd=17 --output-folder=. --build missing \
 cmake .. or cmake -DCMAKE_BUILD_TYPE=Debug  ..
-make -j8
+make -j8 
 ```
 Go to the folder /build and run the application Movie manager: 
 ```
